@@ -1,0 +1,708 @@
+/*
+-ms- Supported by Edge/Internet Explorer with prefix -ms-
+-moz- Supported by Firefox with prefix -moz-
+-webkit- Supported by Google Chrome with prefix -webkit-
+-webkit- Supported by Safari with prefix -webkit-
+-webkit- Supported by Opera with prefix -webkit-
+*/
+
+
+/* .my-custom-main-menu-class{
+
+    margin: 0 auto;
+
+    margin-left: 50px;
+
+} */
+
+/* .main-index {} */
+
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+.bg-header{
+
+    height: 100px;
+
+    background-color: #FFFFFF;
+
+}
+
+$width-logo: 292px;
+
+.logo{
+
+    /* margin-left: 292px; */
+
+    // font: {
+    //     size: $width-logo;
+    // }
+
+    margin-top: 20px;
+
+    display: inline;
+
+    a { width:100%; height: 100%;
+
+        img {
+
+            width: $width-logo;
+            height: 60px;
+
+        }
+
+    }
+
+}
+
+/*.logo a{ width:100%; height: 100%;}*/
+
+// .logo a img {
+
+//     width: 292px;
+//     height: 60px;
+
+// }
+
+
+
+.main-menu{
+
+    /* design by mobile first */
+
+    display: inline;
+
+    width: 60%;
+
+    height: 100%;
+
+    margin-bottom: 20px;
+
+    /* display: none; */
+
+    z-index: -10;
+
+    visibility: hidden;
+
+}
+
+
+
+.my-custom-main-menu-class{
+
+   width: 100%;
+
+   /* display: inline; */
+
+   z-index: 10;
+
+   /* overflow: hidden; */
+
+}
+
+
+
+
+
+div.my-custom-main-menu-class {
+
+    ul {
+
+        list-style-type: none;
+
+        list-style: none;
+
+        list-style-image: none;
+
+        text-decoration: none;
+
+        display: inline-block;
+
+        background-color: gray;
+    }
+
+    li {
+
+        /* padding: 20px; */
+
+        /* display: inline; */
+
+        font-size: 1.35rem;
+
+        text-decoration: none;
+
+        line-height: 0;
+
+        a{
+
+            text-decoration: none;
+
+            color: white;
+
+            /* font-weight: bold; */
+        }
+    }
+
+}
+
+
+ul.nav_main {position: fixed;
+    li {
+        a {
+            &:hover {text-decoration: italic; text-shadow: 2px 2px blue;}
+        }
+    }
+    
+}
+
+
+// ul.nav_main li a:hover {text-decoration: italic; text-shadow: 2px 2px blue;}
+
+
+
+/* li ul .menu-item63{display: none;} */
+
+
+
+#lines-button {
+
+    /* display: inline-block; */
+
+    cursor: pointer;
+
+    position: fixed;
+
+    margin-right: 50px;
+
+}
+
+
+
+.bar1, .bar2, .bar3 {
+
+    width: 35px;
+
+    height: 5px;
+
+    background-color: #333;
+
+    margin: 6px 0;
+
+    transition: 0.4s;
+
+    border-radius: 10px;
+
+}
+
+.hr-div{height: 0;}
+
+
+/*-----------------------------*/
+
+.post_type_book {margin-bottom: 0;}
+
+
+/* .chinhsach-area .site-main-chinhsach .chinhsach-container p {
+    width: 100%;  
+}
+
+.chinhsach-area .site-main-chinhsach .chinhsach-container div:nth-child(2) img{
+    margin-left: 30%;
+} */
+
+/*-----------------------------*/ 
+
+#quote{background-color: #004A85;}
+/* #quote{background-color: #F6F6F6;} */
+
+
+
+.copyright{text-align: center; font-size: 1.2rem; color: #FFFFFF; padding: 2px;}
+
+
+
+/* footer .container {width: 100%;} */
+
+
+
+.footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+{
+
+    font-size: 1.6rem;
+
+}
+
+/*--bonus---*/
+
+ul.social-icons li a img:hover {filter: brightness(50%);}
+
+.title-post a {font-size: 1.3rem;}
+
+/* .parallax-index {height: 200px;} */
+
+
+/*----------------------------------RESPONSIVE-------------------------------*/
+
+@media only screen and (min-width: 480px) {
+
+    .footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+    {font-size: 1.6rem;}
+
+
+
+    .logo a{
+
+        /* margin-left: 292px; */
+
+        margin: 0 auto;
+
+    }
+
+
+
+    /* .main-menu{display: none;} */
+
+}
+
+@media screen and (min-width: 600px) {
+
+    .footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+    {font-size: 2rem;}
+
+
+    .logo a{
+
+        margin-left: 0;
+
+    } 
+
+
+    .logo a img {
+
+        /* width: 294px; */
+
+        height: 60px;
+
+    }
+
+    /* .bg-header{position: fixed;} */
+
+    /* .main-index{margin-top: 100px;} */
+
+    .hr-div{height: 200px;}
+
+    .main-index .two, .main-index .three, .main-index .four, .main-index .five, .main-index .six, .main-index .seven{
+        height: 0;
+    }
+
+    .book_thumbnail{width: 100%; z-index: -1; padding-left: 0; }
+
+    .chinhsach-area .site-main-chinhsach .chinhsach-container p {
+        width: 100%;  
+    }
+
+    .chinhsach-area .site-main-chinhsach .chinhsach-container div:nth-child(2) img{
+        margin-left: 30%;
+    }
+
+    /*-----bonus------*/
+    .title-post{margin-top: -20%;}
+
+    /* .parallax-index {height: 500px;} */
+
+    #lines-button{
+        display: inline-block;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+    {font-size: 1.8rem;}
+
+
+
+    .logo a{
+
+        margin-left: 0;
+
+    } 
+
+    
+
+    .logo a img {
+
+        width: 264px;
+
+        height: 60px;
+
+    }
+
+    .chinhsach-area .site-main-chinhsach .chinhsach-container div:nth-child(2) img{
+        margin-left: 40%;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 785px) {
+
+    .footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+    {font-size: 1.6rem;}
+
+}
+
+
+
+@media (min-width: 800px) {
+
+
+
+}
+
+
+
+@media screen and (min-width: 980px) {
+
+    .footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+    {font-size: 1.7rem;}
+
+
+
+    .logo a{
+
+        margin-left: 43%;
+
+    }
+
+    /*------*/
+
+    /* .post_type_book {margin-bottom: 500px;} */
+
+}
+
+@media screen and (min-width: 993px) {
+
+    #header-menu .col{
+
+        padding: 0;
+
+    }
+
+
+
+    .logo a{
+
+        margin-left: 0;
+
+        img {
+
+            width: 264px;
+
+            height: 60px;
+
+        }
+
+    }
+
+
+
+    // .logo a img {
+
+    //     width: 264px;
+
+    //     height: 60px;
+
+    // }
+
+
+
+    #lines-button{
+
+        display: table-header-group;
+
+        margin-top: 30px;
+
+        margin-left: 76%;
+
+    }
+    /*--bonus---*/
+    .my-custom-main-menu-class{margin-left: 420px; margin-top: 35px;}
+
+    li.item-posst .title-post a {font-size: 1.3rem;}
+
+   
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .footer-so-1 #new-products_block_right .widgettitle, .footer-so-2 #new-products_block_right .widgettitle, .footer-so-3 #new-products_block_right .widgettitle
+
+    {font-size: 1.8rem;}
+
+
+
+    .logo {
+
+        margin-left: 0;
+
+        a {
+            img {
+
+                width: 264px;
+
+                height: 60px;
+
+            }
+        }
+    }
+
+    .bg-header{position: fixed;}
+
+    .my-custom-main-menu-class{
+
+        width: 100%;
+
+        display: inline;
+
+        margin-left: 100px;
+
+        /* overflow: auto !important;  or 'visible' whatever */
+
+     }
+
+
+
+     div.my-custom-main-menu-class ul{padding-top: 7px; background-color: transparent;} 
+
+     /* transparent = none */
+
+
+
+     div.my-custom-main-menu-class li {
+
+        font-size: 12px;
+
+        display: inline;
+
+        li a {color: black;}
+
+    }
+
+    // div.my-custom-main-menu-class li a {color: black;}
+
+
+
+
+
+    .main-menu{display: block; visibility: visible;}
+
+    .main-index .two, .main-index .three, .main-index .four, .main-index .five{
+        height: 150px;
+    }
+
+    ul.nav_main {position: static;}
+
+
+    /* menu */
+    ul.nav_main li a:hover {text-decoration: italic; text-shadow: 0 0 whitesmoke; color: burlywood;}
+    
+
+
+
+    /*---*/
+
+
+
+    .nav_main_bottom li {display: inline-block; font-size: 16px;  padding: 20px 20px 0 0;}
+
+
+
+    #lines-button{display: none;}
+
+
+
+    /*----------------------*/
+
+    .post_type_book {margin-bottom: 200px;}
+
+    /*----------------------*/
+    /* #slider ul {width: 1000px;} */
+
+}
+
+@media (min-width: 1025px) {}
+
+/* @media (max-width: 1100px) {div#slider{width: 52%;} div#slider ul{margin-left: 0;}} */
+
+@media (min-width: 1080px) {}
+
+@media (min-width: 1240px) {
+
+    #lines-button{display: none;}
+
+    .main-menu{display: block;}
+
+
+
+    div.my-custom-main-menu-class{margin-left: 16%;}
+
+
+    div.my-custom-main-menu-class li {
+
+        font-size: 17px;
+
+    }
+}
+
+
+
+@media (min-width: 1280px) {
+
+
+
+}
+
+/* ----------------------------------------------- */
+/* PAGINATION */
+
+// --------------------------------------------------
+// SCSS
+
+@import url('https://fonts.googleapis.com/css?family=KoHo');
+
+// import file variables.scss and colors.scss
+@import "abc/variables", "abc/colors";
+
+$image-url: "../../images/";
+
+.el1 {
+   // background-url: $image-url + "background.png";
+   background: url($image-url + "background.png");
+   font: {
+        family: Arial;
+        size: 20px;
+        weight: bold;
+   }
+}
+
+.el2 {
+    // Kế thừa từ class el1
+    @extend .el1;
+}
+
+%el3 {
+    font-size: 2em;
+}
+// -------------------------
+
+#context a%el3;
+
+.el5 {
+    @extend %el3;
+}
+
+// Kết quả:
+// #context a.el5 {
+
+// }
+
+// --------------------------
+// List 
+$headerElement: h1, h2, h3, h4, h5;
+
+//Đếm số phần tử trong biến mảng
+$len : length($headerElement);
+
+// ---------------------------------
+@mixin beauty ($color, $width, $style: dashed) {
+    border: {
+        color: $color;
+        width: $width;
+        style: $style;
+        radius: 1px;
+    }
+}
+
+.el6 {
+    // @include beauty (red, 10px);
+    @include beauty (#ff0000, 20px);
+}
+// ------------------------------------
+
+$color-blue: blue;
+$color-yellow: yellow;
+$other: #8A2BE2;
+$color-other-hover: #008B8B;
+
+$color-button: (
+    // $keyColor    : $valueColor //
+            red     : red,
+            blue    : $color-blue,
+            yellow  : $color-yellow,
+            green   : #ffffff,
+            other   : (
+                background: $other,
+                hover: $color-other-hover
+            )
+);
+
+@each $keyColor, $valueColor in $color-button {
+    // .btn-#{$keyColor} {
+    //     background-color: #7FFF00;
+    //     // background-color: $valueColor;
+    //     color: $value;
+
+    //     // Hover for all
+    //     &:hover {
+    //         background-color: $color-other-hover;
+    //     }
+    // }
+
+    // CSS and Hover for each
+    @each $key, $value in $valueColor {
+        @if $key == "background" {
+            .btn-#{$keyColor} {
+                @extend %el3;
+                background-color: $valueColor;
+                color: $valueColor;
+            }
+        }
+        @else {
+            .btn-#{$keyColor}:hover {
+                background-color: $value;
+                color: $value;
+            }
+        }
+    }
+}
+
+// Kết quả:
+// .btn-red {
+//     background-color: #7FFF00;
+//     color: red;
+// }
+// .btn-blue {...}
+// .btn-yellow {...}
+// .btn-green {...}
+// .btn-other {
+//     background-color: #8A2BE2;
+//     color: #8A2BE2;
+// }
+// .btn-other:hover {
+//     background-color: #008B8B;
+// }
+
+
