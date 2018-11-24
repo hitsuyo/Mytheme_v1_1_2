@@ -9,7 +9,7 @@
                 document.documentElement.scrollTop = 0;
         }
 
-        // When the user scrolls down 20px from the top of the document, show the button
+        // When the user scrolls down 20px from the top of the document, show the button 'Scroll to top - Up arrow'
     //     window.onscroll = function() {scrollFunction()};
         jQuery(window).on('scroll', function () {
             scrollFunction();
