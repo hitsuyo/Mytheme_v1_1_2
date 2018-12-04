@@ -90,6 +90,11 @@ Template Name: My Posts
         </div>
     </div>
 
+    <!-- Show related post -->
+     <?php 
+        require get_template_directory() . '/template-parts/related_posts/related-post-my_posts.php'; 
+     ?>
+
 <style type="text/css">
     ul.list-book{
         list-style-type: none;

@@ -333,6 +333,7 @@ function my_enqueue_scripts() {
 	   wp_enqueue_style( 'style', get_stylesheet_uri() ); //important
 
     //Enqueuing scripts; true: load js in footer, false: not load in footer
+	   // array('jquery') : want jquery load before this script if need
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.0.0.min.js' , array('jquery'), '3.3.0', true); // default
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3-3-1.js' , array('jquery'), '3.3.1', true); // default
 
@@ -347,6 +348,17 @@ function my_enqueue_scripts() {
 		wp_enqueue_style('component', get_template_directory_uri() . '/assets/css/component.css', array(), '1.1.0' , 'all');
 		wp_enqueue_script('jquery_dlmenu', get_template_directory_uri() . '/assets/js/plugin_of_codrops_js/jquery.dlmenu.js' , array('jquery'), '1.1.0', true);
 }
+
+
+// add ie conditional html5 shiv to header
+function add_ie_html5_shiv ()
+{
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>';
+    echo '<![endif]-->';
+}
+add_action('wp_head', 'add_ie_html5_shiv');
+
 
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 

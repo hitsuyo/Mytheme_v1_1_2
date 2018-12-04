@@ -20,11 +20,7 @@
 
 	</header><!-- .entry-header -->
 
-
-
 	<!-- php underscores_post_thumbnail();  -->
-
-
 
 	<div class="entry-content">
 
@@ -35,26 +31,17 @@
 			wp_kses(
 
 				/* translators: %s: Name of current post. Only visible to screen readers */
-
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscores' ),
 
 				array(
-
 					'span' => array(
 
 						'class' => array(),
-
 					),
-
 				)
-
 			),
-
 			get_the_title()
-
 		) );
-
-
 
 		// wp_link_pages( array(
 
@@ -68,10 +55,11 @@
 
 	</div><!-- .entry-content -->
 
-
-
 </article><!-- #post-<?php the_ID(); ?> -->
 
-
+<!-- Show related post -->
+ <?php 
+    require get_template_directory() . '/template-parts/related_posts/related-post.php'; 
+ ?>
 
 <!-- php get_footer();  -->
