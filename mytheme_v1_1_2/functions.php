@@ -229,7 +229,7 @@ include 'inc/setting.php';
 include 'inc/setting_from_plugin.php';
 
 include 'inc/init.php';
-include 'inc/init_pagination_ajax.php';
+// include 'inc/init_pagination_ajax.php';
 
 include 'inc/init_bonus.php';
 
@@ -307,13 +307,9 @@ function my_enqueue_scripts() {
 
 	// wp_enqueue_script( 'material-js', $uri .'/assets/js/materialize.js', array('material'), $version, true );
 
-
-
-	// wp_enqueue_script( 'jquery-js', get_template_directory_uri() .'/assets/js/jquery-3-3-1.js', array('jquery'), $version, true );
-
 	// wp_enqueue_script( 'custom-js', get_template_directory_uri() .'/assets/js/custom.js', array('jquery'), $version, true );
 
-
+		wp_enqueue_style( 'style', get_stylesheet_uri() ); //important
 
 		// wp_enqueue_style('material-css', get_template_directory_uri() .'/assets/css/materialize.css', array(), $version, 'all'); // default
 		wp_enqueue_style('material-css', get_template_directory_uri() .'/assets/css/materialize.min.css', array(), $version, 'all'); // default
@@ -328,15 +324,11 @@ function my_enqueue_scripts() {
 	   wp_enqueue_style('my_style', get_template_directory_uri() . '/assets/css/my_style.css', array(), '1.1.0' , 'all'); // default
 		// wp_enqueue_style('my_style', get_template_directory_uri() . '/assets/css/my_style_minify.css', array(), '1.1.0' , 'all');
 
-		wp_enqueue_style('my_style_bonus', get_template_directory_uri() . '/assets/css/my_style_bonus.css', array(), '1.1.0' , 'all'); // default
-
-	   wp_enqueue_style( 'style', get_stylesheet_uri() ); //important
+		wp_enqueue_style('my_style_bonus', get_template_directory_uri() . '/assets/css/my_style_bonus.css', array('my_style'), '1.1.0' , 'all'); // default
 
     //Enqueuing scripts; true: load js in footer, false: not load in footer
-	   // array('jquery') : want jquery load before this script if need
-	wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.0.0.min.js' , array('jquery'), '3.3.0', true); // default
-	wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3-3-1.js' , array('jquery'), '3.3.1', true); // default
-
+	   
+	// array('jquery') : want jquery load before this script if need
 	wp_enqueue_script('my-script', get_template_directory_uri() . '/assets/js/script.js' , array('jquery'), '1.1.0', true); // default
 
 	// wp_enqueue_script('my-script-bonus', get_template_directory_uri() . '/assets/js/script_bonus.js' , array('jquery'), '1.1.0', true); // default
@@ -351,23 +343,29 @@ function my_enqueue_scripts() {
 
 
 // add ie conditional html5 shiv to header
+// Support html5 on IE8 (and earlier) && disable Reponsive on IE8
 function add_ie_html5_shiv ()
 {
     echo '<!--[if lt IE 9]>';
     echo '<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>';
+    echo '<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>';
+    echo '<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>';
     echo '<![endif]-->';
 }
 add_action('wp_head', 'add_ie_html5_shiv');
 
 
-add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
-
-
-function add_myjavascript(){
-	// ensure jQuery load before load this js file 
-	wp_enqueue_script( 'ajax-implementation.js', get_template_directory_uri() . "/assets/js/ajax-implementation.js", array( 'jquery' ), '1.1.0', true );
-}
-// add_action( 'init', 'add_myjavascript' );
+// --------------------------------------------------------
+// If you are a Web developer and still code websites compatible with a few older versions of Internet Explorer, then you must be well aware of X-UA-Compatible meta tag.
+function wpcrux_head_meta() {
+  /*
+   * MS IE and Edge compatibility meta (modify `content` as 
+   * per your requirement).
+   */
+  $html = "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\n";
+  echo $html;
+} 
+add_action( 'wp_head', 'wpcrux_head_meta' );
 
 
 /**@ Thiết lập $content_width để khai báo kích thước chiều rộng của nội dung**/

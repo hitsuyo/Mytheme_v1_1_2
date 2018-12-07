@@ -1,5 +1,9 @@
 <?php
 	//This script will be called to all_ajax_script.php
+
+    // Implement pagination post ajax
+
+    // All this scripts support for init_pagination_ajax.php
 ?>
 
 <script>

@@ -5,10 +5,15 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        
-        &lt;!--[if lt IE 9]&gt;
-         &lt;script src="dist/html5shiv.js"&gt;&lt;/script&gt;
-        &lt;![endif]--&gt;
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <![endif]-->
+
+        <?php
+        // &lt;!--[if lt IE 9]&gt;
+        //  &lt;script src="dist/html5shiv.js"&gt;&lt;/script&gt;
+        // &lt;![endif]--&gt;
+        ?>
         
     </head>
 

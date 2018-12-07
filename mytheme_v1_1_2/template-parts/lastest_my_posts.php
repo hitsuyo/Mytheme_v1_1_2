@@ -1,6 +1,8 @@
 <?php
 /*
 Template Name: 
+
+* Use function in init_pagination_ajax.php
 */
 // get_header();
 ?>

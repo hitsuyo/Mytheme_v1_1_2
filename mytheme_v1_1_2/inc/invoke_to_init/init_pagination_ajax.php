@@ -1,6 +1,6 @@
 <?php
 
-// Use for pagination_JS.php && lastest_my_posts.php
+// Use for pagination_JS.php
 
 add_action( 'wp_ajax_cvf_demo_pagination_load_posts', 'cvf_demo_pagination_load_posts' );
 
