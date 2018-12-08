@@ -181,3 +181,10 @@ include 'invoke_to_init/load_post_by_taxonomy_shortcode_schortcode($atts).php';
 // ---------------------
 
 include 'invoke_to_init/init_pagination_ajax.php';
+
+// ---------------------
+/**
+ * Custom template tags for this theme.
+    Small pieces for showing post
+ */
+require get_template_directory() . '/invoke_to_init/template-tags.php';

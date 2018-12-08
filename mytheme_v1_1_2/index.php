@@ -148,7 +148,9 @@ get_header();
             </style>
 
             <!-- <br> -->
+            <!-- Posts or any cpt will load here    -->
             <div class="post_taxanomy" ></div>
+            <!--                                    -->
         </div>
 
         

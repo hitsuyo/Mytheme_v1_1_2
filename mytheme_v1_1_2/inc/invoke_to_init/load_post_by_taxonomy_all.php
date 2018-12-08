@@ -56,6 +56,8 @@ function load_post_by_taxonomy_all(){
                                     echo '<div class="title-post"><a style="color: white; font-weight: bold;  text-shadow: 1px 1px #004A85; width: 65%; z-index: 2;" href="'.get_the_permalink( $post->ID).'">' . get_the_title() . '</a></div>';
                                 echo '</div>';
                             echo '</li>';
+
+                            // mytheme_post_thumbnail();
                         }
                         echo '</ul>';
                         /* Restore original Post Data */
@@ -131,3 +133,6 @@ function load_post_by_taxonomy_all(){
 }
 add_action('wp_ajax_load_post_by_taxonomy_all', 'load_post_by_taxonomy_all');
 add_action('wp_ajax_nopriv_load_post_by_taxonomy_all', 'load_post_by_taxonomy_all');
+
+// add_action('wp_ajax_FUNC', 'FUNC');
+// add_action('wp_ajax_nopriv_FUNC', 'FUNC');
