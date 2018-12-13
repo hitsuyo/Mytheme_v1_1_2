@@ -159,7 +159,7 @@ function load_post_by_taxonomy_project3()
     load_post_by_taxonomy('project3');
 }
 
-add_action('wp_ajax_lload_post_by_taxonomy_project3', 'load_post_by_taxonomy_project3');
+add_action('wp_ajax_load_post_by_taxonomy_project3', 'load_post_by_taxonomy_project3');
 add_action('wp_ajax_nopriv_load_post_by_taxonomy_project3', 'load_post_by_taxonomy_project3');
 
 function load_post_by_taxonomy_project4()
@@ -169,5 +169,5 @@ function load_post_by_taxonomy_project4()
 }
 //...
 
-add_action('wp_ajax_lload_post_by_taxonomy_project4', 'load_post_by_taxonomy_project4');
+add_action('wp_ajax_load_post_by_taxonomy_project4', 'load_post_by_taxonomy_project4');
 add_action('wp_ajax_nopriv_load_post_by_taxonomy_project4', 'load_post_by_taxonomy_project4');
